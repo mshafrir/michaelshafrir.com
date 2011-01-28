@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>WebCenter Interaction Portal Implementation Survey</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<link rel="stylesheet" type="text/css"
+			href="/static/portal/portal.css">
+		<link rel="stylesheet" type="text/css"
+			href="/static/portal/tablesorter-blue/style.css">
+
+		<!-- jQuery and Tablesorter -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>		
+		<script type="text/javascript" src="/static/portal/jquery.metadata.js"></script>
+		<script type="text/javascript" src="/static/portal/jquery.tablesorter.js"></script>
+		
+		<script type="text/javascript" src="/static/portal/portal.js"></script>
+	</head>
+	<body>
+		<h1>WebCenter Interaction Portal Implementation Survey</h1>
+		
+		<p id="intro">
+			The data below was collected by identifying and crawling
+			publicly available WCI portal implementations.
+		</p>
+		
+		<table id="portal_versions" class="tablesorter">
+			<caption>Portal versions</caption>
+			<thead>
+				<tr>
+					<th>Version</th>
+					<th>Count</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for version in versions %}
+				<tr>
+					<td>
+						<a href="/portal?v={{ version.1 }}">
+							{{ version.1 }}</a>
+					</td>
+					<td>
+						{{ version.0 }}
+					</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		
+		{% if stats %}
+		<table id="portal_stats" class="tablesorter">
+			<caption>Statistics for {{ stats|length }} portal sites</caption>
+			<thead>
+				<tr>
+					<th>Host Name</th>
+					<th>Server Name</th>
+					<th>Portal Version</th>
+					<th>Total Request Time</th>
+					<th>Page Display Time</th>
+					<th>Control Time</th>
+					<th>Construction Time</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for stat in stats %}
+				<tr>
+					<td>
+						<a href="http://{{ stat.host_name }}">
+							{{ stat.host_name }}
+						</a>
+					</td>
+					<td>{{ stat.server_name }}</td>
+					<td>{{ stat.portal_version }}</td>
+					<td>{{ stat.total_request_time }}</td>
+					<td>{{ stat.page_display_time }}</td>
+					<td>{{ stat.control_time }}</td>
+					<td>{{ stat.page_construction_time }}</td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+		{% endif %}
+	</body>
+</html>

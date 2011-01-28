@@ -1,0 +1,8 @@
+queue:
+- name: news-items
+  rate: 1/s
+  bucket_size: 20
+  
+- name: portal-pages
+  rate: 1/s
+  bucket_size: 20

@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>michaelshafrir.com</title>
+		
+		<meta name="description" content="Michael Shafrir">
+		<meta name="keywords" content="Michael Shafrir">
+		
+		<!--
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
+		-->
+		
+		<script type="text/javascript"
+				src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+		<script type="text/javascript" src="/static/js/smc.js"></script>
+		
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css"
+			href="http://yui.yahooapis.com/combo?2.7.0/build/reset-fonts-grids/reset-fonts-grids.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/960.css" >
+			
+		<link rel="stylesheet" type="text/css" href="/static/css/base.css">
+	</head>
+    
+	<body>
+		<div id="{% block grid_id %}doc2{% endblock %}" class="{% block grid_class %}yui-t2{% endblock %}">
+			<div id="hd" class="container_12">
+				<div class="grid_4">
+					<h1>
+						<a href="/">
+							<img src="/static/images/banner.png" alt="Spilled Milk Catering home">
+						</a>
+					</h1>
+				</div>
+				
+				<div class="grid_8">
+					<ul id="nav">
+						<li class="nav_home">
+							<a href="/">home</a>
+						</li>
+						
+						<li class="spacer">:</li>
+						<li class="nav_about">
+							<a href="/about">about</a>
+						</li>
+						
+						<li class="spacer">:</li>
+						<li class="nav_menu">
+							<a href="/menu">menu</a>
+						</li>
+						
+						<li class="spacer">:</li>
+						<li class="nav_press">
+							<a href="/press">press</a>
+						</li>
+						
+						<li class="spacer">:</li>
+						<li class="nav_contact">
+							<a href="/contact">contact</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="clear"></div>
+			</div>
+			
+			<div id="bd">
+				michaelshafrir.com
+			</div>
+			
+			<div id="ft">
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		
+		<script type="text/javascript">
+		var pageTracker = _gat._getTracker("UA-8363178-2"); pageTracker._trackPageview();
+		</script>
+	</body>
+</html>

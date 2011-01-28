@@ -1,0 +1,154 @@
+html
+{
+	margin:					0;
+	padding:				0;
+}
+
+body
+{
+	border-top:				3px solid #6D9BD4;
+	padding:				10px;
+	font-family:			Verdana;
+	font-size:				12px;	
+}
+
+#header
+{
+	margin-bottom:			30px;
+}
+
+h1
+{
+	font-family:			"Lucida Sans", Verdana, Arial, Sans-Serif;
+	font-size:				22px;
+	margin:					8px 0;
+}
+
+h2
+{
+	font-family:			"Lucida Sans", Verdana, Arial, Sans-Serif;
+	font-size:				18px;
+	margin:					32px 0 6px 0;
+	color:					#111;
+}
+
+form#search_form
+{
+	display:				inline-block;
+	width:					460px;
+}
+
+form#search_form input#query
+{
+	
+	font-family:			"Lucida Console", monospace;
+	font-size:				13px;
+	padding:				2px;
+	width:					300px;
+}
+
+img#ajax_loader
+{
+	display:				inline-block;
+	visibility:				hidden;
+	margin:					0 4px;
+	height:					16px;
+	width:					16px;
+}
+
+#results_container
+{
+	margin:					20px 40px;
+	visibility:				hidden;
+}
+
+#results_container ol#results_list
+{
+	list-style-type:		decimal;
+	width:					680px;
+}
+
+#results_container ol#results_list li
+{
+	margin:					10px 0;
+	font-family:			"Lucida Console", monospace;
+	font-size:				11px;
+	padding:				6px 0;
+	border-bottom:			1px dotted #e6e6e6;
+}
+
+#results_container ol#results_list li a
+{
+	display:				inline-block;
+	width:					600px;
+	padding:				4px 0;
+	overflow:				hidden;
+	margin:					0 0 0 12px;
+}
+
+#results_container ol#results_list li .pagerank
+{
+	display:				inline-block;
+	margin:					0 0 0 16px;
+	padding:				4px 6px;
+	color:					#000;
+	width:					20px;
+	text-align:				right;
+	font-size:				14px;
+}
+
+
+#results_container ol#results_list li .pagerank.v_0
+{
+	background:				#EFF5FF;
+}
+
+#results_container ol#results_list li .pagerank.v_1
+{
+	background:				#DFEBFF;
+}
+
+#results_container ol#results_list li .pagerank.v_2
+{
+	background:				#CFE2FF;
+}
+
+#results_container ol#results_list li .pagerank.v_3
+{
+	background:				#BFD8FF;
+}
+
+#results_container ol#results_list li .pagerank.v_4
+{
+	background:				#AFCEFF;
+}
+
+#results_container ol#results_list li .pagerank.v_5
+{
+	background:				#9FC4FF;
+}
+
+#results_container ol#results_list li .pagerank.v_6
+{
+	background:				#8FBAFF
+}
+
+#results_container ol#results_list li .pagerank.v_7
+{
+	background:				#7FB0FF;
+}
+
+#results_container ol#results_list li .pagerank.v_8
+{
+	background:				#6FA7FF;
+}
+
+#results_container ol#results_list li .pagerank.v_9
+{
+	background:				#5F9DFF;
+}
+
+#results_container ol#results_list li .pagerank.v_10
+{
+	background:				#4F93FF;
+}

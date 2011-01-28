@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+	<head>
+		<title>fb img lookup - {% block head_title %}home{% endblock %}</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="icon" type="image/ico" href="/favicon.ico" />
+
+		<!--
+		<script type="text/javascript"
+				src="http://www.google.com/jsapi?key=ABQIAAAAbS93tJ_uidHDZWvF7euCFBSVKOrJpbpmqhswZxM9z6l59FWlQBSMnhV7wC-qft8TywjVoI4HtvbQ5w"></script>
+		-->
+
+		<script type="text/javascript"
+				src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
+		<script type="text/javascript"
+				src="/static/js/script.js"></script>
+		
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css"
+			href="http://yui.yahooapis.com/2.6.0/build/reset-fonts-grids/reset-fonts-grids.css" /> 
+		{% block head_css %}{% endblock %}
+		
+		<!-- JS -->
+		{% block head_scripts %}{% endblock %}
+	</head>
+    
+	<body>
+		<div id="doc3" class="yui-t7"> 
+			<div id="hd">
+				<div id="user_action">
+				{% if is_logged_in %}
+					<span id="nickname">{{ nickname }}</span> :: 
+					<a href="{{ logout_url }}">logout</a>
+				{% else %}
+					<a href="{{ login_url }}">login</a> 
+				{% endif %}
+				</div>
+				
+				<h1><a href="/">fb img lookup</a></h1>
+			</div>
+			
+			<div id="bd">
+				<div class="yui-g" id="content">
+				{% block content %}
+				{% endblock %}
+				</div>
+			</div>
+			
+			<div id="ft">
+				team nubs
+			</div>
+		</div>
+	</body>
+</html>
+
+<!-- wsf. -->

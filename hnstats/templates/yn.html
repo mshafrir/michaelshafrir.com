@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+	<head>
+		<title>yn</title>
+		<style type="text/css">
+			body, table
+			{
+				font-family:			"Lucida Sans", Verdana, Arial, Sans-Serif;
+				font-size:				11px;
+			}
+			
+			table td
+			{
+				padding:				4px;
+			}
+		</style>
+	</head>
+	<body>
+		{% if max %}
+		<p>max: {{ max.id }}</p>
+		{% endif %}
+		{% if items %}
+		<table>
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>id</th>
+					<th>author</th>
+					<th>score</th>
+					<th>link</th>
+					<th>comment</th>
+					<th>posted</th>
+					<th>parent_id</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for item in items %}
+				<tr>
+					<td>{{ forloop.revcounter }}</td>
+					<td>
+						<a href="http://news.ycombinator.com/item?id={{ item.id }}">{{ item.id }}</a>
+					</td>
+					<td>{{ item.author }}</td>
+					<td>{{ item.score }}</td>
+					<td>
+						{% if item.url %}
+						<a href="{{ item.url }}">{{ item.title }}</a>
+						{% else %}
+						n/a
+						{% endif %}
+					</td>
+					<td>{{ item.comment }}</td>
+					<td>{{ item.posted }}</td>
+					<td>{{ item.parent_id }}</td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+		{% else %}
+		<p>No items.</p>
+		{% endif %}
+	</body>
+</html>

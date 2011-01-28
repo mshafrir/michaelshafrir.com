@@ -1,0 +1,20 @@
+cron:
+#- description: add hn items to queue job
+#  url: /yn/job
+#  schedule: every 1 minutes
+  
+- description: fetch Bing portal search results
+  url: /portal/search?count=10&site=bing
+  schedule: every 1 minutes
+
+- description: fetch Google portal search results
+  url: /portal/search?count=4&site=google
+  schedule: every 1 minutes
+  
+- description: fetch Yahoo BOSS portal search results
+  url: /portal/search?count=10&site=yahoo_boss
+  schedule: every 1 minutes
+  
+- description: reset the search trackers
+  url: /portal/reset
+  schedule: every day 00:00

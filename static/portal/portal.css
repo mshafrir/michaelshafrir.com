@@ -1,0 +1,42 @@
+body {
+	font-family:				"Helvetica Neue", "Helvetica";
+}
+
+h1 {
+	font-size:					20px;
+}
+
+p#intro {
+	font-family:				"Helvetica Neue", "Helvetica";
+	font-size:					14px;
+}
+
+table
+{
+	font-family:				Monaco, monospace;
+	font-size:					10px;
+	border-collapse:			collapse;
+	margin:						10px 0;
+}
+
+table caption
+{
+	padding:					4px;
+}
+
+table th
+{
+	font-weight:				bold;
+	cursor:						pointer;
+}
+
+table th,
+table td
+{
+	padding:					2px 6px;
+}
+
+table#portal_versions
+{
+	width:						260px;
+}
