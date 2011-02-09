@@ -29,7 +29,7 @@ def main():
     ROUTES = [
         ('/', Router)
     ]
-    application = webapp.WSGIApplication(ROUTES, debug=True)
+    application = webapp.WSGIApplication(ROUTES, debug=False)
     run_wsgi_app(application)
 
     
