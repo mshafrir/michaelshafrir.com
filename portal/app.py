@@ -356,7 +356,7 @@ def main():
         ('/portal/reset', PageTrackerReset),
         ('/portal', Report)
     ]
-    application = webapp.WSGIApplication(ROUTES, debug=True)
+    application = webapp.WSGIApplication(ROUTES, debug=False)
     run_wsgi_app(application)
 
     
