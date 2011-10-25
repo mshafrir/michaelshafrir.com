@@ -1,41 +1,38 @@
-application: fb-img
+application: mshafrir
 version: 1
-runtime: python
+runtime: python27
 api_version: 1
+threadsafe: no
+
+builtins:
+- remote_api: on
+- datastore_admin: on
+- appstats: on
+
+libraries:
+- name: django
+  version: "1.2"
 
 handlers:
+- url: /remote_api
+  script: $PYTHON_LIB/google/appengine/ext/remote_api/handler.py
+  login: admin
+
 - url: /imgup(|/(.*))
   script: imgup/app.py
-  
+
 - url: /united/(.*)
   script: united/app.py
 
-- url: /kitchen(|/(.*))
-  script: virmanikitchen/app.py
- 
 - url: /portal(|.csv|/(.*))
   script: portal/app.py
 
-- url: /yn/foo
-  script: hnstats/app.py
-  
-- url: /yn(/process|/search|/job)
-  script: hnstats/app.py
-  login: admin
-  
-- url: /yn
-  script: hnstats/app.py
-  
-  
-  
 - url: /urlrank
   script: urlrank/app.py
-  
+
 - url: /rank(|/(u|s))
   script: rank/app.py
-  
-  
-  
+
 - url: /vbb/admin/bulk/(upload|download)
   script: vbb/admin-bulk.py
 
@@ -47,29 +44,21 @@ handlers:
 
 - url: /vbb(|/.*(|/.*))
   script: vbb/app.py
-  
-  
-
-- url: /s3test
-  script: s3test/s3test.py
-
-- url: /newsy(|/(.*))
-  script: newsy/newsy.py
 
 - url: /
   script: michaelshafrir/routes.py
 
 - url: /static
   static_dir: static
-  
+
 - url: /sitemap.xml
   static_files: static/site/sitemap.xml
   upload: static/site/sitemap.xml
-   
+
 - url: /robots.txt
   static_files: static/site/robots.txt
   upload: static/site/robots.txt
-  
+
 - url: /favicon.ico
   static_files: static/images/favicon.ico
   upload: static/images/favicon.ico

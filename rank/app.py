@@ -1,16 +1,12 @@
-import os
-import wsgiref.handlers
 import urllib
 
-from google.appengine.ext import db
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp.util import run_wsgi_app
 from google.appengine.ext.webapp import template
-from google.appengine.api import users
 from google.appengine.api import urlfetch
 from google.appengine.api import memcache
 
-import lib.simplejson as simplejson
+import json
 import rank.helper as helper
 from rank.pagerank import *
 
@@ -73,7 +69,7 @@ class RankUrl(webapp.RequestHandler):
                 memcache.set(PAGE_RANK_KEY, url, MEMCACHE_TIME)
 
         self.response.headers['Content-Type'] = 'text/plain'
-        self.response.out.write(simplejson.dumps({'page_rank': max(page_rank, 0), 'error': error}))
+        self.response.out.write(json.dumps({'page_rank': max(page_rank, 0), 'error': error}))
 
 
 class SearchResults(webapp.RequestHandler):    
@@ -96,7 +92,7 @@ class SearchResults(webapp.RequestHandler):
                     logging.debug("PAGE: %s => status code = %s" % (page, search_response.status_code))
                     
                     if search_response and search_response.status_code == 200:
-                        search_response_json = simplejson.loads(search_response.content)
+                        search_response_json = json.loads(search_response.content)
                         for search_result in search_response_json['responseData']['results']:
                             result_urls.append(str(search_result['unescapedUrl']))
                             
@@ -111,7 +107,7 @@ class SearchResults(webapp.RequestHandler):
 
         else:
             self.response.headers['Content-Type'] = 'text/plain'
-            self.response.out.write(simplejson.dumps({'urls': result_urls}))
+            self.response.out.write(json.dumps({'urls': result_urls}))
 
 
 def main():
@@ -124,6 +120,6 @@ def main():
     application = webapp.WSGIApplication(ROUTES, debug=True)
     run_wsgi_app(application)
 
-    
+
 if __name__ == "__main__":
     main()

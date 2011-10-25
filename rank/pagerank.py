@@ -1,5 +1,5 @@
 def IntStr(String, Integer, Factor):
-    for i in range(len(String)) :
+    for i in range(len(String)):
         Integer *= Factor
         Integer &= 0xFFFFFFFF
         Integer += ord(String[i])
@@ -35,7 +35,7 @@ def checkHash(HashInt):
     while i >= 0:
         Byte = int(HashStr[i])
         if 1 == (Flag % 2):
-            Byte *= 2;
+            Byte *= 2
             Byte = Byte / 10 + Byte % 10
         CheckByte += Byte
         Flag += 1
