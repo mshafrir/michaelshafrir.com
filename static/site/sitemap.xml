@@ -1,17 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
- xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
- http://www.sitemaps.or g/schemas/sitemap/0.9/sitemap.xsd">
-    <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-    
-    <url>
-        <loc>
-            http://www.michaelshafrir.com/
-        </loc>
-        <changefreq>
-            daily
-        </changefreq>
-    </url>
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>http://www.michaelshafrir.com/</loc>
+</url>
+<url>
+  <loc>http://www.michaelshafrir.com/portal</loc>
+</url>
+<url>
+  <loc>http://www.michaelshafrir.com/portal?v=10.3.0.337003</loc>
+</url>
+<url>
+  <loc>http://www.michaelshafrir.com/portal?v=6.1.1.254209</loc>
+</url>
+<url>
+  <loc>http://www.michaelshafrir.com/portal?v=6.0.1.218452</loc>
+</url>
+<url>
+  <loc>http://www.michaelshafrir.com/portal?v=6.1.2.329005</loc>
+</url>
+<url>
+  <loc>http://www.michaelshafrir.com/portal?v=6.5.1.328335</loc>
+</url>
+<url>
+  <loc>http://www.michaelshafrir.com/portal?v=5.0.4</loc>
+</url>
+<url>
+  <loc>http://www.michaelshafrir.com/portal?v=6.1.0.240495</loc>
+</url>
+<url>
+  <loc>http://www.michaelshafrir.com/portal?v=6.5.0.323160</loc>
+</url>
+<url>
+  <loc>http://www.michaelshafrir.com/portal?v=5.0.2</loc>
+</url>
+<url>
+  <loc>http://www.michaelshafrir.com/portal?v=10.3.0.339246</loc>
+</url>
+<url>
+  <loc>http://www.michaelshafrir.com/portal?v=6.0.0.204729</loc>
+</url>
+<url>
+  <loc>http://www.michaelshafrir.com/portal?v=5.0.5</loc>
+</url>
+<url>
+  <loc>http://www.michaelshafrir.com/portal?v=0.0.0.0</loc>
+</url>
+<url>
+  <loc>http://www.michaelshafrir.com/portal?v=6.1.0.235226</loc>
+</url>
 </urlset>

@@ -18,32 +18,11 @@ handlers:
   script: $PYTHON_LIB/google/appengine/ext/remote_api/handler.py
   login: admin
 
-- url: /imgup(|/(.*))
-  script: imgup/app.py
-
 - url: /united/(.*)
   script: united/app.py
 
 - url: /portal(|.csv|/(.*))
   script: portal/app.py
-
-- url: /urlrank
-  script: urlrank/app.py
-
-- url: /rank(|/(u|s))
-  script: rank/app.py
-
-- url: /vbb/admin/bulk/(upload|download)
-  script: vbb/admin-bulk.py
-
-- url: /vbb/admin/demos
-  script: vbb/admin.py
-
-- url: /vbb/admin(|/sections(|/(.*)))
-  script: vbb/admin.py
-
-- url: /vbb(|/.*(|/.*))
-  script: vbb/app.py
 
 - url: /
   script: michaelshafrir/routes.py
