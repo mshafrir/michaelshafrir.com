@@ -15,8 +15,8 @@ from lib.BeautifulSoup import BeautifulSoup
 import json
 
 import portal.helper as helper
-from portal.models import *
-from pyExcelerator import *
+from portal.models import PageTracker
+from portal.models import PortalStats
 
 import logging
 logging.getLogger().setLevel(logging.DEBUG)
