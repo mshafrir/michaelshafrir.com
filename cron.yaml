@@ -1,11 +1,11 @@
 cron:
 - description: fetch Bing portal search results
   url: /portal/search?count=10&site=bing
-  schedule: every 1 minutes
+  schedule: every 12 hours
 
 - description: fetch Google portal search results
   url: /portal/search?count=4&site=google
-  schedule: every 1 minutes
+  schedule: every 12 hours
 
 - description: reset the search trackers
   url: /portal/reset
