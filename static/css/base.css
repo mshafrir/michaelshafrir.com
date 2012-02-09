@@ -1,33 +1,27 @@
-body
+section#about-me
 {
-	font-family:		Georgia,Times,serif;
-	color:				#555;
-	font-size:			18px;
-	padding-top:		140px;
+	color:					#555;
+	padding-top:		70px;
 }
 
-p
-{
+section#about-me p {
+	margin-bottom: 20px;
+}
+
+section#about-me p,
+section#about-me li {
+	font-family:		Georgia,Times,serif;
 	text-align:			left;
 	line-height:		160%;
+	font-size:			14px;
 }
 
-h1
-{
-	display:			inline;
-	margin:				0;
-	padding:			0;
+section#about-me #portfolio {
+	margin-bottom: 20px;
 }
 
-a
-{
-	color:				#000;
-}
-
-strong
-{
-	font-weight:		bold;
-	color:				#000;
+section#about-me #portfolio p {
+	margin-bottom: 8px;
 }
 
 #more_soon

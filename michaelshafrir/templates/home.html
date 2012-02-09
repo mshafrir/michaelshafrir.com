@@ -1,30 +1,65 @@
 {% extends "base.html" %}
 
 {% block page_content %}
-		<div class="container_12">
-			<div class="prefix_1 grid_5 suffix_6">
-				<p>
-					Hey, I'm <a href="/" id="me">Michael Shafrir</a>. I'm a founder at
-					<a href="http://marketbrief.com">MarketBrief</a>, a financial technology startup
-					in <a href="http://goo.gl/maps/98lq">Palo Alto, CA</a>.
-					I work on web and mobile apps
-					for <a href="http://www.marketbrief.com">work</a>,
-					friends - <a href="http://www.spilledmilkcatering.com">caterers</a>,
-					<a href="http://elenisvillage.com">bed &amp; breakfasts</a>,
-					and <a href="http://www.voicedbybill.com">voice talents</a>, for example - 
-					and fun - <a href="/portal">portal implementation survey</a> and
-					<a href="http://www.commitsearch.com">code search</a>.
-					I'm also into <a href="http://www.flickr.com/photos/onebelo/sets/"
-					title="but who isn't these days?">photography</a>.
-					You can get in touch with me through <a href="mailto:mshafrir@gmail.com">e-mail</a>,
-					<a href="http://www.linkedin.com/in/mshafrir">LinkedIn</a>,
-					or <a href="http://www.facebook.com/michael.shafrir">Facebook</a>, or
-					<a href="http://twitter.com/michaelshafrir">Twitter</a>.
-					Check out my code on <a href="http://github.com/mshafrir/">GitHub</a>.
-					<span id="more_soon">More to come.</span>
-				</p>
+		<div class="container">
+			<div class="row">
+				<div class="span4">
+					<section id="about-me">
+						<p>
+							Hey, I'm <a href="/" id="me">Michael Shafrir</a>. I'm a co-founder at
+							<a href="http://marketbrief.com">MarketBrief</a>, a financial technology startup
+							in <a href="http://goo.gl/maps/98lq">Palo Alto, CA</a>.
+						</p>
+
+						<div id="portfolio">
+						<p>I work on web and mobile apps for</p>
+							<ul>
+								<li>
+									work,
+									<ul>
+										<li><a href="http://www.marketbrief.com">MarketBrief</a></li>
+									</ul>
+								<li>
+									friends,
+									<ul>
+										<li><a href="http://www.spilledmilkcatering.com">caterers</a></li>
+										<li><a href="http://elenisvillage.com">bed &amp; breakfasts</a></li>
+										<li><a href="http://www.voicedbybill.com">voice talents</a></li>
+									</ul>
+								</li>
+								<li>
+									and fun
+									<ul>
+										<li><a href="/portal">portal implementation survey</a></li>
+										<li><a href="http://www.commitsearch.com">GitHub commit search</a></li>
+										<li>a <a href="https://github.com/mshafrir/nutshell-crm">Ruby gem wrapper</a> for the <a href="http://www.nutshell.com/api/">Nutshell CRM API</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+
+						<p>
+							I also do <a href="http://www.flickr.com/photos/onebelo/sets/"
+							title="but who isn't these days?">photography</a>.
+						</p>
+
+						<p>
+							You can get in touch with me through <a href="mailto:mshafrir@gmail.com">e-mail</a>,
+							<a href="http://www.linkedin.com/in/mshafrir">LinkedIn</a>,
+							or <a href="http://www.facebook.com/michael.shafrir">Facebook</a>, or
+							<a href="http://twitter.com/michaelshafrir">Twitter</a>.
+						</p>
+
+						<p>
+							Check out my blog, <a href="http://bespoke.posterous.com/">Bespoke Blogging</a>.
+							Judge my code on <a href="http://github.com/mshafrir/">GitHub</a>.
+						</p>
+
+						<p>
+							<span id="more_soon">More to come.</span>
+						</p>
+					</section>
+				</div>
 			</div>
-			
-			<div class="clear"></div>
 		</div>
 {% endblock %}

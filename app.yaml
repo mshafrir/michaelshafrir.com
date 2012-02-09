@@ -6,7 +6,6 @@ threadsafe: no
 
 builtins:
 - remote_api: on
-- datastore_admin: on
 - appstats: on
 
 libraries:
@@ -14,6 +13,9 @@ libraries:
   version: "1.2"
 
 handlers:
+- url: /datastore_admin
+  script: $PYTHON_LIB/google/appengine/ext/datastore_admin/main.py
+
 - url: /remote_api
   script: $PYTHON_LIB/google/appengine/ext/remote_api/handler.py
   login: admin
