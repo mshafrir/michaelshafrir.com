@@ -20,11 +20,11 @@ handlers:
   script: $PYTHON_LIB/google/appengine/ext/remote_api/handler.py
   login: admin
 
-- url: /united/(.*)
-  script: united/app.py
-
 - url: /portal(|.csv|/(.*))
   script: portal/app.py
+
+- url: /sitepulse
+  script: michaelshafrir/routes.py
 
 - url: /
   script: michaelshafrir/routes.py

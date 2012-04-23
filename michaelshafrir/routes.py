@@ -7,11 +7,19 @@ import michaelshafrir.helper as helper
 import logging
 logging.getLogger().setLevel(logging.DEBUG)
 
-
-class Router(webapp.RequestHandler):
+class SitePulseView(webapp.RequestHandler):
     def get(self):
         template_values = None
-        self.response.out.write(template.render(helper.get_template_path("home"),
+        self.response.out.write(template.render(helper.get_template_path('sitepulse'),
+                                                template_values))
+
+    def head(self):
+        pass
+
+class AboutMeView(webapp.RequestHandler):
+    def get(self):
+        template_values = None
+        self.response.out.write(template.render(helper.get_template_path('home'),
                                                 template_values))
 
     def head(self):
@@ -20,7 +28,8 @@ class Router(webapp.RequestHandler):
 
 def main():
     ROUTES = [
-        ('/', Router)
+        ('/sitepulse', SitePulseView),
+        ('/', AboutMeView)
     ]
     application = webapp.WSGIApplication(ROUTES, debug=False)
     run_wsgi_app(application)
