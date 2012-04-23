@@ -1,7 +1,9 @@
-section#about-me
-{
-	color:					#555;
-	padding-top:		70px;
+body {
+	padding: 70px 0;
+}
+
+section#about-me {
+	color:					#5a5a5a;
 }
 
 section#about-me p {
@@ -24,7 +26,6 @@ section#about-me #portfolio p {
 	margin-bottom: 8px;
 }
 
-#more_soon
-{
+section#about-me #more_soon {
 	color:				#aF3300
 }
