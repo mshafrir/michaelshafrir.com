@@ -3,31 +3,29 @@
 <html lang="en">
 	<head>
 		<title>WebCenter Interaction Portal Implementation Survey</title>
-		
+
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		
-		<link rel="stylesheet" type="text/css"
-			href="/static/portal/portal.css">
-		<link rel="stylesheet" type="text/css"
-			href="/static/portal/tablesorter-blue/style.css">
+
+		<link rel="stylesheet" href="/static/portal/portal.css">
+		<link rel="stylesheet" href="/static/portal/tablesorter-blue/style.css">
 
 		<!-- jQuery and Tablesorter -->
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>		
-		<script type="text/javascript" src="/static/portal/jquery.metadata.js"></script>
-		<script type="text/javascript" src="/static/portal/jquery.tablesorter.js"></script>
-		
-		<script type="text/javascript" src="/static/portal/portal.js"></script>
-		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+		<script src="/static/portal/jquery.metadata.js"></script>
+		<script src="/static/portal/jquery.tablesorter.js"></script>
+
+		<script src="/static/portal/portal.js"></script>
+
 		<script src="/static/js/analytics.js"></script>
 	</head>
 	<body>
 		<h1>WebCenter Interaction Portal Implementation Survey</h1>
-		
+
 		<p id="intro">
 			The data below was collected by identifying and crawling
 			publicly available WCI portal implementations.
 		</p>
-		
+
 		<table id="portal_versions" class="tablesorter">
 			<caption>Portal versions</caption>
 			<thead>
@@ -50,7 +48,7 @@
 				{% endfor %}
 			</tbody>
 		</table>
-		
+
 		{% if stats %}
 		<table id="portal_stats" class="tablesorter">
 			<caption>Statistics for {{ stats|length }} portal sites</caption>
